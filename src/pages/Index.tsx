@@ -40,14 +40,26 @@ const Index = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-blue-950/30" />
 
       <div className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-100/60 via-blue-50/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-gray-50/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-50/50 via-blue-100/20 to-transparent" />
         <div 
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-            backgroundSize: '8px 8px',
-            backgroundPosition: '0 0, 4px 4px'
+            backgroundImage: `
+              radial-gradient(ellipse 3px 2px at 20% 50%, white, transparent),
+              radial-gradient(ellipse 2px 3px at 60% 70%, rgba(255,255,255,0.8), transparent),
+              radial-gradient(ellipse 4px 3px at 80% 30%, rgba(255,255,255,0.6), transparent),
+              radial-gradient(ellipse 2px 2px at 40% 80%, white, transparent)
+            `,
+            backgroundSize: '15px 15px, 20px 20px, 18px 18px, 12px 12px',
+            backgroundPosition: '0 0, 5px 5px, 10px 2px, 3px 8px'
+          }}
+        />
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `linear-gradient(45deg, transparent 48%, rgba(200,220,255,0.3) 49%, rgba(200,220,255,0.3) 51%, transparent 52%)`,
+            backgroundSize: '4px 4px'
           }}
         />
       </div>
