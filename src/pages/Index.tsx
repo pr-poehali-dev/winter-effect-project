@@ -39,6 +39,23 @@ const Index = () => {
       
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-blue-950/30" />
 
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ mixBlendMode: 'screen' }}>
+        <defs>
+          <filter id="frost">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
+            <feColorMatrix type="saturate" values="0" />
+            <feComponentTransfer>
+              <feFuncA type="discrete" tableValues="0 0 0 0 1 1 1 1 1" />
+            </feComponentTransfer>
+          </filter>
+        </defs>
+        <rect x="0" y="25%" width="15%" height="50%" fill="white" opacity="0.4" filter="url(#frost)" />
+        <rect x="15%" y="15%" width="12%" height="60%" fill="white" opacity="0.35" filter="url(#frost)" />
+        <rect x="32%" y="28%" width="8%" height="48%" fill="white" opacity="0.3" filter="url(#frost)" />
+        <rect x="28%" y="20%" width="35%" height="8%" fill="white" opacity="0.4" filter="url(#frost)" />
+        <rect x="85%" y="15%" width="8%" height="60%" fill="white" opacity="0.35" filter="url(#frost)" />
+      </svg>
+
       <div className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-gray-50/90 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-blue-50/50 via-blue-100/20 to-transparent" />
