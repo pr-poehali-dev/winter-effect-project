@@ -39,7 +39,10 @@ const Index = () => {
       
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-blue-950/30" />
 
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white/60 via-white/30 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-50/40 to-transparent" />
+      </div>
 
       <div className="absolute inset-0 pointer-events-none">
         {snowflakes.map((flake) => (
