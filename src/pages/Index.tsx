@@ -39,9 +39,17 @@ const Index = () => {
       
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-blue-950/30" />
 
-      <div className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-transparent opacity-75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-50/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-100/60 via-blue-50/30 to-transparent" />
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+            backgroundSize: '8px 8px',
+            backgroundPosition: '0 0, 4px 4px'
+          }}
+        />
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
